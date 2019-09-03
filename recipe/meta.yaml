@@ -11,17 +11,17 @@ source:
 
 build:
   noarch: python
-  number: 0
+  number: 1
   script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv "
 
 requirements:
   host:
-    - pip
     - python
+    - pip
   run:
+    - python
     - event-model >=1.8.0
     - pandas
-    - python
     - suitcase-utils
 
 test:
@@ -29,14 +29,10 @@ test:
     - suitcase.csv
 
 about:
-  home: https://nsls-ii.github.io/suitcase
+  home: https://blueskyproject.io/suitcase
   license: BSD (3-clause)
   license_family: BSD
   license_file: 
   summary: Export bluesky documents to CSV
-  doc_url: https://nsls-ii.github.io/suitcase
-  dev_url: https://github.com/NSLS-II/suitcase-csv
-
-extra:
-  recipe-maintainers:
-    - NSLS-II
+  doc_url: https://blueskyproject.io/suitcase
+  dev_url: https://github.com/bluesky/suitcase-csv
