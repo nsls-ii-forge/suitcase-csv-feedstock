@@ -1,5 +1,6 @@
 {% set name = "suitcase-csv" %}
 {% set version = "0.2.1" %}
+{% set sha256 = "2f8eece9502084dcd81143e8ff95ad15ead43325f2fc063f0642789ffecd8a8f" %}
 
 package:
   name: "{{ name|lower }}"
@@ -7,11 +8,11 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 2f8eece9502084dcd81143e8ff95ad15ead43325f2fc063f0642789ffecd8a8f
+  sha256: {{ sha256 }}
 
 build:
   noarch: python
-  number: 1
+  number: 2
   script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv "
 
 requirements:
@@ -32,7 +33,7 @@ about:
   home: https://blueskyproject.io/suitcase
   license: BSD (3-clause)
   license_family: BSD
-  license_file: 
+  license_file: LICENSE
   summary: Export bluesky documents to CSV
   doc_url: https://blueskyproject.io/suitcase
   dev_url: https://github.com/bluesky/suitcase-csv
