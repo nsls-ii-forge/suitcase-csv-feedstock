@@ -1,6 +1,6 @@
 {% set name = "suitcase-csv" %}
-{% set version = "0.2.1" %}
-{% set sha256 = "2f8eece9502084dcd81143e8ff95ad15ead43325f2fc063f0642789ffecd8a8f" %}
+{% set version = "0.3.0" %}
+{% set sha256 = "cc229b978105476d680651223135a0c5ddc21c6f8fe4189f16e2ccfe91ed6157" %}
 
 package:
   name: {{ name|lower }}
@@ -12,8 +12,8 @@ source:
 
 build:
   noarch: python
-  number: 2
-  script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv "
+  number: 0
+  script: '{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv '
 
 requirements:
   host:
